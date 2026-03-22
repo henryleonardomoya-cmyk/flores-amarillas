@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at bottom, #02111d, #000);
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+}
+
+/* Fondo estrellas */
+.night::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.2;
+}
+
+/* RAMO */
+.bouquet {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 450px;
+}
+
+/* FLOR BASE */
+.flower {
+    position: absolute;
+    width: 120px;
+    height: 200px;
+}
+
+/* CREAR FLOR COMPLETA AUTOMÁTICA */
+.flower::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: orange;
+    border-radius: 50%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.flower::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    border-radius: 50%;
+    top: 0;
+    left: 35px;
+    box-shadow:
+        -35px 30px yellow,
+        35px 30px yellow,
+        0px 60px yellow;
+}
+
+/* TALLO */
+.flower {
+    background: linear-gradient(green, green);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 8px 140px;
+}
+
+/* POSICIONES RAMO (tipo abanico) */
+.f1 { left: 30%; transform: rotate(-20deg); }
+.f2 { left: 35%; transform: rotate(-10deg); }
+.f3 { left: 40%; }
+.f4 { left: 45%; transform: scale(1.1); }
+.f5 { left: 50%; }
+.f6 { left: 55%; transform: rotate(10deg); }
+.f7 { left: 60%; transform: rotate(20deg); }
+
+/* MENSAJE */
+.message {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* NOMBRE */
+#nombre {
+    color: #ff69b4;
+    font-weight: bold;
+}
